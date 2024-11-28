@@ -10,7 +10,7 @@ import ToDoForm from '../components/ToDoForm';
 import { Pressable} from 'react-native-web';
 import MainLayout from '../layouts/MainLayout';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   const [taskList, setTaskList] = useState([
     "Do laundry",
     "Go to the gym",

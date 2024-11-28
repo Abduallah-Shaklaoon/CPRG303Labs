@@ -12,7 +12,7 @@ import { Button } from 'react-native-web';
 import MainLayout from '../layouts/MainLayout';
 
 
-export default function AboutScreen() {
+export default function AboutScreen({navigation}) {
     const currDate = new Date().toLocaleDateString();
     return (
       
