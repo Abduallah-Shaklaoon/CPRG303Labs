@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "CPRG303Labs",
+    "scheme": "cprg303labs",
     "slug": "CPRG303Labs",
     "version": "1.0.0",
     "orientation": "portrait",
