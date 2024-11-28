@@ -4,25 +4,24 @@ import React from 'react';
 
 import {
   SafeAreaView,
-  StyleSheet
+  StyleSheet,
+  Text
 } from 'react-native';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen';
-import AboutScreen from '.../screens/AboutScreen';
+import { Button } from 'react-native-web';
+import MainLayout from '../layouts/MainLayout';
 
 
-export default function App() {
+export default function AboutScreen() {
+    const currDate = new Date().toLocaleDateString();
+    return (
+      
+    <MainLayout>
+    <SafeAreaView>
+        <Text>About: This app is a to do list app! I am Abduallah Shaklaoon, and it is {currDate}</Text>
+        <Button title="Home" onPress={() => navigation.navigate('Home')} />
+    </SafeAreaView>
+    </MainLayout>
 
-    const Stack = createStackNavigator();
-  return (
-    <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="About" component={AboutScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
   );
 }
 
