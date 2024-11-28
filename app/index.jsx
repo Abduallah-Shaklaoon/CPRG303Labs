@@ -20,10 +20,13 @@ export default function App() {
     "Go to the gym",
     "Walk the dog"
   ]);
+  const addTask = (task) => {   
+    setTaskList([...taskList, task]);
+    }
   return (
       <SafeAreaView>
         <ToDoList taskList={taskList}/>
-        <ToDoForm />
+        <ToDoForm addTask ={addTask}/>
       </SafeAreaView>
   );
 }
