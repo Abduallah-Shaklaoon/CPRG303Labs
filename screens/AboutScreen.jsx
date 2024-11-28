@@ -3,6 +3,7 @@
 import React from 'react';
 
 import {
+  View,
   SafeAreaView,
   StyleSheet,
   Text
@@ -16,10 +17,10 @@ export default function AboutScreen() {
     return (
       
     <MainLayout>
-    <SafeAreaView>
-        <Text>About: This app is a to do list app! I am Abduallah Shaklaoon, and it is {currDate}</Text>
-        <Button title="Home" onPress={() => navigation.navigate('Home')} />
-    </SafeAreaView>
+        <SafeAreaView>
+            <Text>About: This app is a to do list app! I am Abduallah Shaklaoon, and it is {currDate}</Text>
+            <Button title="Home" onPress={() => navigation.navigate('Home')} />
+        </SafeAreaView>
     </MainLayout>
 
   );

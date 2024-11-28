@@ -3,12 +3,13 @@
 import React from 'react';
 import { useState } from 'react';
 import {
+  View,
   SafeAreaView,
   StyleSheet
 } from 'react-native';
 import ToDoList from '../components/ToDoList';
 import ToDoForm from '../components/ToDoForm';
-import { Button } from 'react-native-web';
+import { Pressable} from 'react-native-web';
 import MainLayout from '../layouts/MainLayout';
 
 export default function HomeScreen() {
@@ -25,7 +26,11 @@ export default function HomeScreen() {
       <SafeAreaView>
         <ToDoList taskList={taskList}/>
         <ToDoForm addTask ={addTask}/>
-        <Button title="Go to About" onPress={() => navigation.navigate('About')} />
+        <View>
+          <Pressable onPress={() => navigation.navigate('About')}>
+            Go to About
+          </Pressable>
+        </View>
       </SafeAreaView>
     </MainLayout>
   );
