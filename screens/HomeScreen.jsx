@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { useState } from 'react';
 import {
@@ -26,11 +24,11 @@ export default function HomeScreen() {
       <SafeAreaView>
         <ToDoList taskList={taskList}/>
         <ToDoForm addTask ={addTask}/>
-        <View>
+        <SafeAreaView>
           <Pressable onPress={() => navigation.navigate('About')}>
             Go to About
           </Pressable>
-        </View>
+        </SafeAreaView>
       </SafeAreaView>
     </MainLayout>
   );
